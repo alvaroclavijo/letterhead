@@ -1,5 +1,6 @@
 .mainForm{
   width: 80%;
+  max-width: 1000px;
   height: 75%;
   border: 3px solid rgb(122, 122, 122);
   margin: auto;
@@ -133,6 +134,18 @@
   text-align: center;
   text-transform: uppercase;
   background-color: rgb(255, 255, 255);
+}
+
+.fSizeL{
+  font-size: 1.2rem;
+}
+
+.fSizeM{
+  font-size: 1rem;
+}
+
+.fSizeS{
+  font-size: 0.8rem;
 }
 
 .width26{

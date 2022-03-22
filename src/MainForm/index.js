@@ -143,7 +143,7 @@ function MainForm() {
               className={`${styles.fieldInput} ${styles.width333} ${styles.height100} ${styles.fSizeM}`}
               onChange={(e) => setBirthDay(e.target.value)}
               placeholder="Dia"
-              type="text"
+              type="number"
               maxLength="2"
             />
             <input
@@ -159,7 +159,7 @@ function MainForm() {
               className={`${styles.fieldInput} ${styles.width333} ${styles.height100} ${styles.fSizeM}`}
               onChange={(e) => setBirthYear(e.target.value)}
               placeholder="Año"
-              type="text"
+              type="number"
               maxLength="4"
             />
           </div>
@@ -208,7 +208,7 @@ function MainForm() {
               className={`${styles.fieldInput} ${styles.width15} ${styles.height100} ${styles.fSizeM}`}
               onChange={(e) => setAddressNumber(e.target.value)}
               placeholder="Número"
-              type="text"
+              type="number"
               maxLength="6"
             />
             <input
@@ -256,7 +256,7 @@ function MainForm() {
               className={`${styles.fieldInput} ${styles.width333} ${styles.height100} ${styles.fSizeM}`}
               onChange={(e) => setJobEntryDay(e.target.value)}
               placeholder="Dia"
-              type="text"
+              type="number"
               maxLength="2"
             />
             <input
@@ -272,7 +272,7 @@ function MainForm() {
               className={`${styles.fieldInput} ${styles.width333} ${styles.height100} ${styles.fSizeM}`}
               onChange={(e) => setJobEntryYear(e.target.value)}
               placeholder="Año"
-              type="text"
+              type="number"
               maxLength="4"
             />
           </div>

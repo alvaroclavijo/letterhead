@@ -134,7 +134,20 @@
   text-align: center;
   text-transform: uppercase;
   background-color: rgb(255, 255, 255);
+  -moz-appearance: textfield;
 }
+
+.fieldInput::-webkit-outer-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.fieldInput::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
 
 .fSizeL{
   font-size: 1.2rem;

@@ -49,9 +49,6 @@ function MainForm() {
     setFormData,
   } = useContext(GlobalContext);
 
-  
-  console.log(lastName);
-
   function submitForm() {
     setViewForm(false);
     setFormData({
@@ -144,7 +141,7 @@ function MainForm() {
               onChange={(e) => setBirthDay(e.target.value)}
               placeholder="Dia"
               type="number"
-              maxLength="2"
+              onInput={(e) => e.target.value = e.target.value.slice(0, 2)}
             />
             <input
               value={birthMonth}
@@ -160,7 +157,7 @@ function MainForm() {
               onChange={(e) => setBirthYear(e.target.value)}
               placeholder="Año"
               type="number"
-              maxLength="4"
+              onInput={(e) => e.target.value = e.target.value.slice(0, 4)}
             />
           </div>
         </div>
@@ -209,7 +206,7 @@ function MainForm() {
               onChange={(e) => setAddressNumber(e.target.value)}
               placeholder="Número"
               type="number"
-              maxLength="6"
+              onInput={(e) => e.target.value = e.target.value.slice(0, 6)}
             />
             <input
               value={addressCity}
@@ -257,7 +254,7 @@ function MainForm() {
               onChange={(e) => setJobEntryDay(e.target.value)}
               placeholder="Dia"
               type="number"
-              maxLength="2"
+              onInput={(e) => e.target.value = e.target.value.slice(0, 2)}
             />
             <input
               value={jobEntryMonth}
@@ -273,7 +270,7 @@ function MainForm() {
               onChange={(e) => setJobEntryYear(e.target.value)}
               placeholder="Año"
               type="number"
-              maxLength="4"
+              onInput={(e) => e.target.value = e.target.value.slice(0, 4)}
             />
           </div>
         </div>

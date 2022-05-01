@@ -18,18 +18,18 @@ function MyApp({ Component, pageProps }) {
     return () => {
       router.events.off('routeChangeComplete', handlerRouteChange)
     }
-  },[])
+  },[router.events])
 
   return (
     <>
-      <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_ID}`} strategy='afterInteractive' />
+      <Script src={`https://www.googletagmanager.com/gtag/js?id=${ga.GA_TRACKING_ID}`} strategy='afterInteractive' />
       <Script id='google-analytics-script' strategy='afterInteractive' >
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
         
-          gtag('config', '${process.env.GOOGLE_ANALYTICS_ID}');
+          gtag('config', '${ga.GA_TRACKING_ID}');
         `}
 
       </Script>

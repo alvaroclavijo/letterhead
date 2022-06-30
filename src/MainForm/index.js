@@ -1,6 +1,7 @@
 import { GlobalContext } from "../../pages";
 import { useContext } from "react";
 import moment from "moment";
+import { event } from "../../lib/google-analytics";
 import styles from "../../styles/Styles.module.css";
 
 function MainForm() {
@@ -50,6 +51,12 @@ function MainForm() {
   } = useContext(GlobalContext);
 
   function submitForm() {
+    event({
+      action:'Print-Click',
+      category:'Button',
+      label:'Print button',
+      value:'Print'
+    })
     setViewForm(false);
     setFormData({
     lastName: lastName,

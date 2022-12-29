@@ -81,6 +81,28 @@ function MainForm() {
     actualDate: actualDate
     })
   }
+
+  function cleanAllFields(){
+    setLastName('');
+    setLastNameMother('');
+    setFirstName('');
+    setInsuredNumber('');
+    setBirthDay('');
+    seTbirthMonth('');
+    setBirthYear('');
+    setGender('');
+    setAddressZone('');
+    setAddressStreet('');
+    setAddressNumber('');
+    setAddressCity('');
+    setSalary('');
+    setJob('');
+    setJobEntryDay('');
+    setJobEntryMonth('');
+    setJobEntryYear('');
+    setCompanyName('');
+    setCompanyId('');
+  }
   moment().locale("es");
   return (
     <main className={styles.mainForm}>
@@ -323,9 +345,12 @@ function MainForm() {
         <div className={styles.field15}></div>
         <div className={styles.field16}></div>
       </div>
-      <button className={styles.button} onClick={() => submitForm()}>
-        IMPRIMIR
-      </button>
+      <div className={styles.buttons}>
+        <button className={styles.button} onClick={cleanAllFields}>LIMPIAR</button>
+        <button className={styles.button} onClick={() => submitForm()}>
+          IMPRIMIR
+        </button>
+      </div>
     </main>
   );
 }
